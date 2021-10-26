@@ -1,0 +1,29 @@
+/* 
+File Name: Robin Bararu Portfolio 
+Student’s Name: Robin Bararu
+StudentID: 301182891
+Date: October 5, 2021
+*/
+
+/* makes all heading bold and centered*/
+h1 {
+    text-align: center;
+    color: rgb(34, 29, 29);
+    font-weight: bold
+  }
+
+  /* aligns all paragraph text to the lef*/
+P { 
+      text-align: left 
+}
+
+/* aligns all images to the center*/
+img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto 
+    }
+/* sets background color of all pages*/
+    body {
+        background-color: rgb(236, 235, 234);
+    }

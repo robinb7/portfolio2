@@ -1,0 +1,50 @@
+
+<%- include ../partials/header.ejs %>
+<%- include  ../partials/main_nav.ejs %>
+
+<!-- Main Content -->
+<main class = "Container">
+    <div class="row">
+        <div class="offset-md- 1 col-md-8">
+            <h1><%= title %></h1>
+            <a href="/person-list/add" class="btn btn-primary" role="button">
+                <i class="fas fa-plus-circle"></i> Add a user
+            </a>
+            <br>
+            <table class = "table table-bordered table-striped table-hover">
+                <!-- Header row -->
+            <tr>
+                <th class = "text-center">Username</th>
+                <th class = "text-center">Email</th>
+                <th class = "text-center">Display Name</th>
+                <th></th>
+                <th></th>
+            </tr>
+
+
+            <!-- repeatable template row-->
+            <% for(let count =0; count < PersonList.length; count++) { %>
+                <tr>
+                    <td class="text-center"><%= PersonList[count].username %> </td>
+                    <td class="text-center"><%= PersonList[count].email %> </td>
+                    <td class="text-center"><%= PersonList[count].displayname %></td>
+                    <td class="text-center col-1">
+                            <a href="/person-list/edit/<%= PersonList[count]._id %>" class="btn btn-primary">
+                                <i class="fas fa-pencil-alt"></i> Edit</a>
+                        </td>
+                        <td class="text-center col-1">
+                            <a href="/person-list/delete/<%= PersonList[count]._id %>" class="btn btn-danger">
+                                <i class="fas fa-trash-alt"></i> Delete</a>
+                        </td>
+                </tr>       
+            <%} %>
+            </table>
+        </div>
+    </div>
+</main>
+
+
+
+
+<%- include  ../partials/bottom_nav.ejs %>
+<%- include  ../partials/footer.ejs %>

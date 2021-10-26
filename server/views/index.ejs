@@ -1,0 +1,115 @@
+
+ <!-- generator for header-->
+<%- include partials/header.ejs %>
+
+ <!-- express generator for navbar-->
+<%- include  partials/main_nav.ejs %>
+  
+
+  <!--Main Content of page-->
+  <main class="container">
+    <div class="jumbotron">
+      
+      
+ <!-- if statement to generate contend of the home page-->
+      <% if (title == "Home"){ %>
+      <h1>Welcome to the Home page.</h1>
+      <br>
+        <p>Hello, my name is Robin and I am currently studing at Centenial College. My goal is to use this website
+        to showcase my skills in various different programming languages!</p>
+        <br>
+        <p>Please click on any of the following buttons to view what this website has to offer:
+            <a class="nav-link" href="/about"><i class="fas fa-info-circle"></i> About</a>
+            <a class="nav-link" href="/projects"><i class="fas fa-tasks"></i> Projects</a>
+            <a class="nav-link" href="/services"> <i class="far fa-handshake"></i> Services</a>
+            <a class="nav-link" href="/contact"><i class="fas fa-mobile-alt"></i> Contact </a>
+          </p>
+
+  <!-- if statement to generate contend of the about page--> 
+          <% } else if (title == "About") { %>
+          <h1>About me</h1>
+          <img src=/images/profile.png>
+         
+          <br>
+          <br> 
+          <p>My name is Robin Bararu. I am currently enrolled in the software engineering technology program 
+          at Centenial college. I am learning manny different programming languages such as: Java, C# and Javascript.
+          My goal is to become a software developper and to create manny different applications that are used to help
+          people in many different ways.</p>
+          <p>Please click on the following link to view my resume. <br>
+          <a href="/images/MyResume.pdf">My Resume</a></p>
+
+    <!-- if statement to generate contend of the Projects page-->
+
+          <% } else if (title == "Projects") { %>
+          <h1>My Projects.</h1>
+          <br>
+          <br>
+          <br>
+
+          <p><b>1. Swimmer registration program</b></p>
+
+          <img src="/images/swimproject.png">
+          <p>Designed an interactive swimming tracking program with Windows Forms(.NET) and C#. The program 
+              displays a list of swimmers and a list of swimming clubs which can be modified by the user. Upon being 
+              prompt and filling out a swimmer’s or a club’s attributes, the user will be able to add a new swimmer or 
+              a new club to the list. The program also allows users to upload swimmers or clubs from a text file into 
+              the displayed list and vice versa. </p>
+               <br>
+
+          <b>2. Ticket sale program</b></p>
+          <img src="/images/ticketproject.png">
+          <p>As a two hours timed evaluation, I desgined a ticket selling program with Windows Forms(.NET) and C#.
+          This application propmts users with a form and once the users select all availble options, a pop up message
+          will appear displaying a summary of the users ticket information.</p>
+          <br>
+
+          <b>3. Student form web application</b></p>
+          <img src="/images/formproject.png">
+          <p>Designed a interactive student form web page with HTML and CSS. The web page prompts the user form
+          various information and once the user correctly completes all requirements, the application will save
+          the user's inputs.</p>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+      <!-- if statement to generate contend of the services page-->
+        <% } else if (title == "Services") { %>
+         <h1>Services Offered:</h1>
+         <li>Web Design</li>
+         <li>Data Analysis</li>
+         <li>Tutoring</li>
+         <li>Programming</li>
+         <br>
+          <br>
+         <img src="/images/services.png">
+
+      <!-- if statement to generate contend of the contact page with express generator from partials folder-->
+
+         <% } else if (title == "Contact") { %>
+         <h1>Contact Me</h1>
+         <br>
+        <%- include  partials/contact_form.ejs %>
+
+        
+       
+
+        
+ 
+      <% } %>
+      
+      
+    </div>
+  </main>
+
+
+
+
+<%- include  partials/bottom_nav.ejs %>
+<%- include  partials/footer.ejs %>
+
+
+
+
